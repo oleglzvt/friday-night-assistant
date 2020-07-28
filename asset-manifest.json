@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/friday-night-assistant/static/css/main.faf4b8ce.chunk.css",
+    "main.js": "/friday-night-assistant/static/js/main.d78fd17c.chunk.js",
+    "main.js.map": "/friday-night-assistant/static/js/main.d78fd17c.chunk.js.map",
+    "runtime-main.js": "/friday-night-assistant/static/js/runtime-main.938cb06b.js",
+    "runtime-main.js.map": "/friday-night-assistant/static/js/runtime-main.938cb06b.js.map",
+    "static/js/2.6794138a.chunk.js": "/friday-night-assistant/static/js/2.6794138a.chunk.js",
+    "static/js/2.6794138a.chunk.js.map": "/friday-night-assistant/static/js/2.6794138a.chunk.js.map",
+    "index.html": "/friday-night-assistant/index.html",
+    "precache-manifest.34ea922ef740e25be018a78116cf8993.js": "/friday-night-assistant/precache-manifest.34ea922ef740e25be018a78116cf8993.js",
+    "service-worker.js": "/friday-night-assistant/service-worker.js",
+    "static/css/main.faf4b8ce.chunk.css.map": "/friday-night-assistant/static/css/main.faf4b8ce.chunk.css.map",
+    "static/js/2.6794138a.chunk.js.LICENSE.txt": "/friday-night-assistant/static/js/2.6794138a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.938cb06b.js",
+    "static/js/2.6794138a.chunk.js",
+    "static/css/main.faf4b8ce.chunk.css",
+    "static/js/main.d78fd17c.chunk.js"
+  ]
+}
