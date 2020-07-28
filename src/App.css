@@ -8,21 +8,130 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
-
-html {
-  font-size: 62.5%;
-}
-
-img {
-  width: 100%;
-}
-
 .wrapper {
   max-width: 1200px;
   width: 80%;
   margin: 0 auto;
 }
 
+html {
+  font-size: 62.5%
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.7rem;
+}
+
+button {
+  background: none;
+  border: 2px solid black;
+  font-size: 1.5rem;
+  margin: 10px;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+button:hover,
+button:focus,
+button:focus-within {
+  border: 2px solid orange;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  font-size: 1.7rem;
+  padding: 10px;
+  text-align: center;
+  margin: 20px;
+}
+
+.menuBtn {
+  display: flex;
+  justify-content: center;
+}
+
+.drink {
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  margin: 20px 0;
+}
+
 .drinkImage {
-  width: 30%;
+  width: 15%;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.drinkDescription {
+  width: 60%;
+}
+
+.ingredients {
+  font-size: 1.5rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Animation */
+.animateTop {
+  animation: slideDown .5s ease-out;
+}
+
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-25%); }   
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animateBottom {
+  animation: slideUp .5s ease-out;
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(25%); }   
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 720px) {
+  .drink {
+    flex-direction: column;
+  }
+
+  .drinkImage {
+    width: 50%;
+    /* justify-content: center;
+    align-items: center; */
+    margin: 20px auto 0 auto;
+  }
+
+  .drinkDescription {
+    width: 100%;
+    text-align: center;
+  }
 }
