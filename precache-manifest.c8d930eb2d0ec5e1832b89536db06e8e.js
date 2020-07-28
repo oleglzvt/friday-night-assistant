@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b830a0a77a796eb057afcd2e8af3bbc7",
+    "revision": "8d0ffb6edfa18a6f0495193c4522b33b",
     "url": "/friday-night-assistant/index.html"
   },
   {
-    "revision": "31d2c794c5398674aeb1",
-    "url": "/friday-night-assistant/static/css/main.faf4b8ce.chunk.css"
+    "revision": "1e368c348af9a6f95213",
+    "url": "/friday-night-assistant/static/css/main.599e2753.chunk.css"
   },
   {
     "revision": "6b85858f12c247374ccc",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/friday-night-assistant/static/js/2.6794138a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "31d2c794c5398674aeb1",
-    "url": "/friday-night-assistant/static/js/main.d78fd17c.chunk.js"
+    "revision": "1e368c348af9a6f95213",
+    "url": "/friday-night-assistant/static/js/main.299d5b21.chunk.js"
   },
   {
     "revision": "702f97d56de779244829",
