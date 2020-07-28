@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import './App.css';
 import axios from 'axios';
 import NameSearch from './NameSearch'
-// import IngredientSearch from './IngredientSearch'
 import RandomSearch from './RandomSearch'
 
 class App extends Component {
@@ -11,7 +10,6 @@ class App extends Component {
     super();
     this.state = {
       searchByName: false,
-      // searchByIngredient: false,
       random: false,
       userInput: '',
       drinks: [],
@@ -22,21 +20,13 @@ class App extends Component {
     this.setState({
       random: false,
       searchByName: true,
-      // searchByIngredient: false,
       userInput: ''
     })  
   }
-  // handleIngredientSearch = () => {
-  //   this.setState({
-  //     searchByName: false,
-  //     searchByIngredient: true,
-  //     random: false,
-  //   }) 
-  // }
+
   handleRandomSearch = () => {
     this.setState({
       searchByName: false,
-      // searchByIngredient: false,
       random: true,
     })
     axios({
@@ -44,7 +34,6 @@ class App extends Component {
       dataType: 'json',
       method: 'GET'
     }).then((res) => {
-      // console.log(res);
       this.setState({
         drinks: res.data.drinks
       })
@@ -75,7 +64,6 @@ class App extends Component {
       dataType: 'json',
       method: 'GET'
     }).then((res) => {
-      // console.log(res);
       this.setState({
         drinks: res.data.drinks,
         userInput: ''
@@ -96,13 +84,10 @@ class App extends Component {
 
         <div className="menuBtn">
           <button onClick={this.handleNameSearch}>I know what I want</button>
-          {/* <button onClick={this.handleIngredientSearch}>Something with specific ingredient</button> */}
           <button onClick={this.handleRandomSearch}>I am in the mood for anything</button>
         </div>
 
         {this.state.searchByName ? <NameSearch userInput={this.state.userInput} handleChange={this.handleChange} handleSubmit={this.handleSubmit} drinks={this.state.drinks} refreshPage={this.refreshPage}/> : null}
-
-        {/* {this.state.searchByIngredient ? <IngredientSearch userInput={this.state.userInput} handleChange={this.handleChange} handleSubmit={this.handleSubmit} /> : null} */}
         
         {this.state.random ? <RandomSearch drinks={this.state.drinks} refreshPage={this.refreshPage} /> : null}
 
