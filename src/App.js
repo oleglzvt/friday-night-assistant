@@ -34,6 +34,7 @@ class App extends Component {
       dataType: 'json',
       method: 'GET'
     }).then((res) => {
+      console.log(res);
       this.setState({
         drinks: res.data.drinks
       })
@@ -80,7 +81,7 @@ class App extends Component {
     return (
       <div className="app wrapper">
         <h1>Friday Night Assistant</h1>
-        <p>Hello there! My name is Sexy Ricardo and I will be your bartender for tonight. I know lots and lots of cool cocktail recipes. All you need to do is let me know what you feel like toinght and I will come up with the drink to spice up you evening.</p>
+        <p>Hello there! I will be your bartender for tonight. I know lots and lots of cool cocktail recipes. All you need to do is let me know what you feel like toinght and I will come up with the drink to spice up you evening.</p>
 
         <div className="menuBtn">
           <button onClick={this.handleNameSearch}>I know what I want</button>
