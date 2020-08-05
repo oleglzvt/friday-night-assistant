@@ -34,11 +34,9 @@ class App extends Component {
       dataType: 'json',
       method: 'GET'
     }).then((res) => {
-      console.log(res);
       this.setState({
         drinks: res.data.drinks
       })
-      console.log(this.state.drinks);
     })
   }
 
@@ -69,7 +67,6 @@ class App extends Component {
         drinks: res.data.drinks,
         userInput: ''
       })
-      console.log(this.state.drinks);
     })
   }
 
