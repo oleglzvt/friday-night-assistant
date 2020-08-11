@@ -13,8 +13,19 @@ class App extends Component {
       random: false,
       userInput: '',
       drinks: [],
+      plusButtonShown: true,
+			checkButtonShown: false,
     }
   }
+
+  handleToggle = () => {
+		this.setState({
+			plusButtonShown: false,
+			// plusButtonShown: this.state.plusButtonShown ? false : true,
+			checkButtonShown: true,
+			// checkButtonShown: this.state.checkButtonShown ? false : true,
+		})
+	}
 
   handleNameSearch = () => {
     this.setState({
@@ -81,14 +92,14 @@ class App extends Component {
         {/* <p className="greeting">Hello there! Tonight, I am your bartender. I know lots and lots of cool cocktail recipes. All you need to do is let me know what you feel like toinght and I will come up with the drink to spice up you evening.</p> */}
         <p className="greeting">Let me get you a drink!</p>
 
-        <div className="menuBtn">
-          <button onClick={this.handleNameSearch}>I know what I want</button>
-          <button onClick={this.handleRandomSearch}>I am in the mood for anything</button>
+        <div className="menuButtons">
+          <button className="menuBtn" onClick={this.handleNameSearch}>I know what I want</button>
+          <button className="menuBtn" onClick={this.handleRandomSearch}>I am in the mood for anything</button>
         </div>
 
-        {this.state.searchByName ? <NameSearch userInput={this.state.userInput} handleChange={this.handleChange} handleSubmit={this.handleSubmit} drinks={this.state.drinks} refreshPage={this.refreshPage}/> : null}
+        {this.state.searchByName ? <NameSearch userInput={this.state.userInput} handleChange={this.handleChange} handleSubmit={this.handleSubmit} drinks={this.state.drinks} refreshPage={this.refreshPage} handleToggle={this.handleToggle} plusButtonShown={this.state.plusButtonShown} checkButtonShown={this.state.checkButtonShown}/> : null}
         
-        {this.state.random ? <RandomSearch drinks={this.state.drinks} refreshPage={this.refreshPage} /> : null}
+        {this.state.random ? <RandomSearch drinks={this.state.drinks} refreshPage={this.refreshPage} plusButtonShown={this.state.plusButtonShown} checkButtonShown={this.state.checkButtonShown} handleToggle={this.handleToggle}/> : null}
 
       </div>
     );
