@@ -78,7 +78,8 @@ class App extends Component {
     return (
       <div className="app wrapper">
         <h1>Friday Night Assistant</h1>
-        <p>Hello there! I will be your bartender for tonight. I know lots and lots of cool cocktail recipes. All you need to do is let me know what you feel like toinght and I will come up with the drink to spice up you evening.</p>
+        {/* <p className="greeting">Hello there! Tonight, I am your bartender. I know lots and lots of cool cocktail recipes. All you need to do is let me know what you feel like toinght and I will come up with the drink to spice up you evening.</p> */}
+        <p className="greeting">Let me get you a drink!</p>
 
         <div className="menuBtn">
           <button onClick={this.handleNameSearch}>I know what I want</button>
