@@ -29,16 +29,22 @@ class App extends Component {
 
   handleNameSearch = () => {
     this.setState({
+      drinks: [],
       random: false,
       searchByName: true,
-      userInput: ''
+      userInput: '',
+      plusButtonShown: true,
+			checkButtonShown: false,
     })  
   }
 
   handleRandomSearch = () => {
     this.setState({
+      drinks: [],
       searchByName: false,
       random: true,
+      plusButtonShown: true,
+			checkButtonShown: false,
     })
     axios({
       url: `https://www.thecocktaildb.com/api/json/v1/1/random.php`,
@@ -63,9 +69,11 @@ class App extends Component {
     let urlCallValue = '';
     if (this.state.searchByName) {
       urlCallValue = 'search.php?s='
-    } else if (this.state.searchByIngredient) {
-      urlCallValue = 'filter.php?i='
-    } else if (this.state.random) {
+    } 
+    // else if (this.state.searchByIngredient) {
+    //   urlCallValue = 'filter.php?i='
+    // } 
+    else if (this.state.random) {
       urlCallValue = 'random.php'
     }
 
