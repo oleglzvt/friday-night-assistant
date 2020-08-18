@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import Drinks from "./Drinks"
+import LoadingSpinner from "./LoadingSpinner"
 
 class RandomSearch extends Component {
 
@@ -9,7 +10,7 @@ class RandomSearch extends Component {
 		// if(this.props.drinks !== null) {
 			return(
 				<div className="animateBottom">
-					{this.props.drinks.map(drink => {
+					{this.props.loading ? <LoadingSpinner /> : this.props.drinks.map(drink => {
 						return (
 							// <div className="drink" key={drink.idDrink}>
 							// 	<div className="drinkImage">

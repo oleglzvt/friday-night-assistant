@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import Drinks from "./Drinks"
+import LoadingSpinner from "./LoadingSpinner"
 
 class NameSearch extends Component {
 	// constructor() {
@@ -29,7 +30,7 @@ class NameSearch extends Component {
 						<button className="menuBtn" onClick={this.props.handleSubmit}>Give me that drink</button>
 					</form>
 
-					{this.props.drinks.map(drink => {
+					{this.props.loading ? <LoadingSpinner /> : this.props.drinks.map(drink => {
 
 						return (
 							// <div className="drink animateBottom" key={drink.idDrink}>

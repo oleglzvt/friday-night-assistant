@@ -14,6 +14,7 @@ class App extends Component {
       userInput: '',
       drinks: [],
       ingredients: [],
+      loading: false,
     }
   }
 
@@ -35,16 +36,26 @@ class App extends Component {
       searchByName: false,
       random: true,
       plusButtonShown: true,
-			checkButtonShown: false,
+      checkButtonShown: false,
+      loading: true,
     })
     axios({
       url: `https://www.thecocktaildb.com/api/json/v1/1/random.php`,
       dataType: 'json',
       method: 'GET'
     }).then((res) => {
-      this.setState({
-        drinks: res.data.drinks
-      })
+      
+      setTimeout( () => {
+        this.setState({
+          drinks: res.data.drinks,
+          userInput: '',
+          loading: false
+        })
+      }, 1000)
+
+      // this.setState({
+      //   drinks: res.data.drinks
+      // })
     })
   }
 
@@ -56,6 +67,11 @@ class App extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+
+    this.setState({
+      drinks: [],
+      loading: true,
+    })
 
     let urlCallValue = '';
     if (this.state.searchByName) {
@@ -73,10 +89,20 @@ class App extends Component {
       dataType: 'json',
       method: 'GET'
     }).then((res) => {
-      this.setState({
-        drinks: res.data.drinks,
-        userInput: ''
-      })
+      setTimeout( () => {
+        this.setState({
+          drinks: res.data.drinks,
+          userInput: '',
+          loading: false
+        })
+      }, 1000
+
+      )
+      // this.setState({
+      //   drinks: res.data.drinks,
+      //   userInput: '',
+      //   loading: false
+      // })
     })
   }
 
@@ -96,9 +122,9 @@ class App extends Component {
           <button className="menuBtn" onClick={this.handleRandomSearch}>I am in the mood for anything</button>
         </div>
 
-        {this.state.searchByName ? <NameSearch userInput={this.state.userInput} handleChange={this.handleChange} handleSubmit={this.handleSubmit} drinks={this.state.drinks} refreshPage={this.refreshPage} handleToggle={this.handleToggle} plusButtonShown={this.state.plusButtonShown} checkButtonShown={this.state.checkButtonShown}/> : null}
+        {this.state.searchByName ? <NameSearch userInput={this.state.userInput} handleChange={this.handleChange} handleSubmit={this.handleSubmit} drinks={this.state.drinks} refreshPage={this.refreshPage} handleToggle={this.handleToggle} plusButtonShown={this.state.plusButtonShown} checkButtonShown={this.state.checkButtonShown} loading={this.state.loading}/> : null}
         
-        {this.state.random ? <RandomSearch drinks={this.state.drinks} refreshPage={this.refreshPage} plusButtonShown={this.state.plusButtonShown} checkButtonShown={this.state.checkButtonShown} handleToggle={this.handleToggle}/> : null}
+        {this.state.random ? <RandomSearch drinks={this.state.drinks} refreshPage={this.refreshPage} plusButtonShown={this.state.plusButtonShown} checkButtonShown={this.state.checkButtonShown} handleToggle={this.handleToggle} loading={this.state.loading}/> : null}
 
       </div>
     );
