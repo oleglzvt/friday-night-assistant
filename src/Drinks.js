@@ -2,6 +2,24 @@ import React, {Component} from 'react';
 import './App.css';
 
 class Drinks extends Component {
+
+	constructor() {
+		super();
+		this.state = {
+			plusButtonShown: true,
+			checkButtonShown: false,
+		}
+	}
+
+	handleToggle = () => {
+		this.setState({
+			plusButtonShown: false,
+			// plusButtonShown: this.state.plusButtonShown ? false : true,
+			checkButtonShown: true,
+			// checkButtonShown: this.state.checkButtonShown ? false : true,
+		})
+	}
+
     render() {
         return(
             <div className="drink animateBottom" key={this.props.key}>
@@ -19,12 +37,12 @@ class Drinks extends Component {
 									<p>{this.props.recipe}</p>
 								</div>
 								<div className="saveButtons">
-									{this.props.plusButtonShown && <button className="saveBtn" onClick={this.props.handleToggle}>
+									{this.state.plusButtonShown && <button className="saveBtn" onClick={this.handleToggle}>
 										<i className="fas fa-plus"></i>
 									</button>}
 
-									{this.props.checkButtonShown && <button className="saveBtn" onClick={this.props.handleToggle}>
-										<i class="fas fa-check"></i>
+									{this.state.checkButtonShown && <button className="saveBtn" onClick={this.handleToggle}>
+										<i className="fas fa-check"></i>
 									</button>}
 								</div>
 							</div>

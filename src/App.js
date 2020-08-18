@@ -13,23 +13,14 @@ class App extends Component {
       random: false,
       userInput: '',
       drinks: [],
-      plusButtonShown: true,
-			checkButtonShown: false,
+      ingredients: [],
     }
   }
-
-  handleToggle = () => {
-		this.setState({
-			plusButtonShown: false,
-			// plusButtonShown: this.state.plusButtonShown ? false : true,
-			checkButtonShown: true,
-			// checkButtonShown: this.state.checkButtonShown ? false : true,
-		})
-	}
 
   handleNameSearch = () => {
     this.setState({
       drinks: [],
+      ingredients: [],
       random: false,
       searchByName: true,
       userInput: '',

@@ -3,7 +3,9 @@ import './App.css';
 import Drinks from "./Drinks"
 
 class RandomSearch extends Component {
+
 	render() {
+		
 		// if(this.props.drinks !== null) {
 			return(
 				<div className="animateBottom">
