@@ -22,6 +22,7 @@ body {
   background-image: url(./assets/body-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  font-family: 'Open Sans', sans-serif;
 }
 
 img {
@@ -36,7 +37,10 @@ h2 {
 
 h1 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 4rem;
+  font-family: 'Fredoka One', cursive;
+  color: antiquewhite;
+  text-shadow: 0 0 10px black;
 }
 
 h2 {
@@ -56,6 +60,7 @@ p {
   margin: 10px;
   padding: 10px;
   text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
 }
 
 .menuBtn:hover,
@@ -64,6 +69,7 @@ p {
   /* border: 2px solid green; */
   cursor: pointer;
   background-color: rgb(255, 198, 166);
+  font-weight: bold;
 }
 
 .menuBtn:active {
@@ -77,6 +83,14 @@ p {
   right: 2%;
   background: none;
   border: none;
+}
+
+.plusBtn {
+  color: #880114;
+}
+
+.checkBtn {
+  color: #438926;
 }
 
 .saveBtn:hover,
@@ -97,11 +111,6 @@ input {
   padding: 10px;
   text-align: center;
   margin: 20px;
-  /* background: salmon;
-  border: none;
-  border-bottom: 1px solid brown;
-  border-top: 1px solid brown;
-  color: black; */
 }
 
 .greeting {
@@ -175,7 +184,7 @@ input {
   height: 20px;
   border-radius: 50%;
   margin: 10px;
-  background-color: brown;
+  background-color: #880114;
   animation: scaling 1s ease-in-out infinite;
 }
 

@@ -113,9 +113,9 @@ class App extends Component {
   render () {
     return (
       <div className="app wrapper">
-        <h1>Friday Night Assistant</h1>
+        <h1>Let me get you a drink</h1>
         {/* <p className="greeting">Hello there! Tonight, I am your bartender. I know lots and lots of cool cocktail recipes. All you need to do is let me know what you feel like toinght and I will come up with the drink to spice up you evening.</p> */}
-        <p className="greeting">Let me get you a drink!</p>
+        {/* <p className="greeting">Let me get you a drink!</p> */}
 
         <div className="menuButtons">
           <button className="menuBtn" onClick={this.handleNameSearch}>I know what I want</button>

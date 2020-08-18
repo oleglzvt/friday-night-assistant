@@ -37,11 +37,11 @@ class Drinks extends Component {
 									<p>{this.props.recipe}</p>
 								</div>
 								<div className="saveButtons">
-									{this.state.plusButtonShown && <button className="saveBtn" onClick={this.handleToggle}>
+									{this.state.plusButtonShown && <button className="saveBtn plusBtn" onClick={this.handleToggle}>
 										<i className="fas fa-plus"></i>
 									</button>}
 
-									{this.state.checkButtonShown && <button className="saveBtn" onClick={this.handleToggle}>
+									{this.state.checkButtonShown && <button className="saveBtn checkBtn" onClick={this.handleToggle}>
 										<i className="fas fa-check"></i>
 									</button>}
 								</div>
