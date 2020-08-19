@@ -52,10 +52,6 @@ class App extends Component {
           loading: false
         })
       }, 1000)
-
-      // this.setState({
-      //   drinks: res.data.drinks
-      // })
     })
   }
 
@@ -95,14 +91,7 @@ class App extends Component {
           userInput: '',
           loading: false
         })
-      }, 1000
-
-      )
-      // this.setState({
-      //   drinks: res.data.drinks,
-      //   userInput: '',
-      //   loading: false
-      // })
+      }, 1000)
     })
   }
 
@@ -114,21 +103,38 @@ class App extends Component {
     return (
       <div className="app wrapper">
         <h1>Let me get you a drink</h1>
-        {/* <p className="greeting">Hello there! Tonight, I am your bartender. I know lots and lots of cool cocktail recipes. All you need to do is let me know what you feel like toinght and I will come up with the drink to spice up you evening.</p> */}
-        {/* <p className="greeting">Let me get you a drink!</p> */}
-
         <div className="menuButtons">
           <button className="menuBtn" onClick={this.handleNameSearch}>I know what I want</button>
           <button className="menuBtn" onClick={this.handleRandomSearch}>I am in the mood for anything</button>
         </div>
 
-        {this.state.searchByName ? <NameSearch userInput={this.state.userInput} handleChange={this.handleChange} handleSubmit={this.handleSubmit} drinks={this.state.drinks} refreshPage={this.refreshPage} handleToggle={this.handleToggle} plusButtonShown={this.state.plusButtonShown} checkButtonShown={this.state.checkButtonShown} loading={this.state.loading}/> : null}
+        {this.state.searchByName ? 
+          <NameSearch 
+            userInput={this.state.userInput}
+            handleChange={this.handleChange}
+            handleSubmit={this.handleSubmit}
+            drinks={this.state.drinks}
+            refreshPage={this.refreshPage}
+            handleToggle={this.handleToggle}
+            plusButtonShown={this.state.plusButtonShown}
+            checkButtonShown={this.state.checkButtonShown}
+            loading={this.state.loading}
+          /> : null
+        }
         
-        {this.state.random ? <RandomSearch drinks={this.state.drinks} refreshPage={this.refreshPage} plusButtonShown={this.state.plusButtonShown} checkButtonShown={this.state.checkButtonShown} handleToggle={this.handleToggle} loading={this.state.loading}/> : null}
+        {this.state.random ? 
+          <RandomSearch 
+            drinks={this.state.drinks}
+            refreshPage={this.refreshPage}
+            plusButtonShown={this.state.plusButtonShown}
+            checkButtonShown={this.state.checkButtonShown}
+            handleToggle={this.handleToggle}
+            loading={this.state.loading}
+          /> : null
+        }
 
       </div>
     );
-
   }
 }
 
