@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './App.css';
+import '../App.css';
 import Drinks from "./Drinks"
 import LoadingSpinner from "./LoadingSpinner"
 

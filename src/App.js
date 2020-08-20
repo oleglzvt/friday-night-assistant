@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import './App.css';
 import axios from 'axios';
-import NameSearch from './NameSearch'
-import RandomSearch from './RandomSearch'
+import NameSearch from './components/NameSearch'
+import RandomSearch from './components/RandomSearch'
+import FavouritesContainer from './components/FavouritesContainer'
 
 class App extends Component {
 
@@ -15,6 +16,7 @@ class App extends Component {
       drinks: [],
       ingredients: [],
       loading: false,
+      favVisible: false,
     }
   }
 
@@ -97,16 +99,29 @@ class App extends Component {
 
   refreshPage = () => {
     window.location.reload();
-	}
+  }
+  
+  handleFav = () => {
+    this.setState({
+      favVisible: this.state.favVisible ? false : true,
+    })
+  }
 
   render () {
     return (
       <div className="app wrapper">
+        <div className="favContainer">
+          <button className="favBtn" onClick={this.handleFav}><i className="fas fa-cocktail"></i></button>
+        </div>
         <h1>Let me get you a drink</h1>
         <div className="menuButtons">
           <button className="menuBtn" onClick={this.handleNameSearch}>I know what I want</button>
           <button className="menuBtn" onClick={this.handleRandomSearch}>I am in the mood for anything</button>
         </div>
+
+        {/* {this.state.favVisible ? <FavouritesContainer handleFav={this.handleFav} favVisible={this.state.favVisible}/> : null} */}
+
+        <FavouritesContainer handleFav={this.handleFav} favVisible={this.state.favVisible}/>
 
         {this.state.searchByName ? 
           <NameSearch 
