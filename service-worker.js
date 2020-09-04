@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/friday-night-assistant/precache-manifest.be93be73b01361efd709206cd0751045.js"
+  "/friday-night-assistant/precache-manifest.b7667d6fb754224af2a27f4d89d3c63f.js"
 );
 
 self.addEventListener('message', (event) => {

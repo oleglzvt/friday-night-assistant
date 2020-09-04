@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/friday-night-assistant/static/css/main.0dd4fa3c.chunk.css",
-    "main.js": "/friday-night-assistant/static/js/main.89f2e1a4.chunk.js",
-    "main.js.map": "/friday-night-assistant/static/js/main.89f2e1a4.chunk.js.map",
+    "main.css": "/friday-night-assistant/static/css/main.4dd9e57b.chunk.css",
+    "main.js": "/friday-night-assistant/static/js/main.6f151ed3.chunk.js",
+    "main.js.map": "/friday-night-assistant/static/js/main.6f151ed3.chunk.js.map",
     "runtime-main.js": "/friday-night-assistant/static/js/runtime-main.938cb06b.js",
     "runtime-main.js.map": "/friday-night-assistant/static/js/runtime-main.938cb06b.js.map",
     "static/js/2.6794138a.chunk.js": "/friday-night-assistant/static/js/2.6794138a.chunk.js",
     "static/js/2.6794138a.chunk.js.map": "/friday-night-assistant/static/js/2.6794138a.chunk.js.map",
     "index.html": "/friday-night-assistant/index.html",
-    "precache-manifest.be93be73b01361efd709206cd0751045.js": "/friday-night-assistant/precache-manifest.be93be73b01361efd709206cd0751045.js",
+    "precache-manifest.b7667d6fb754224af2a27f4d89d3c63f.js": "/friday-night-assistant/precache-manifest.b7667d6fb754224af2a27f4d89d3c63f.js",
     "service-worker.js": "/friday-night-assistant/service-worker.js",
-    "static/css/main.0dd4fa3c.chunk.css.map": "/friday-night-assistant/static/css/main.0dd4fa3c.chunk.css.map",
+    "static/css/main.4dd9e57b.chunk.css.map": "/friday-night-assistant/static/css/main.4dd9e57b.chunk.css.map",
     "static/js/2.6794138a.chunk.js.LICENSE.txt": "/friday-night-assistant/static/js/2.6794138a.chunk.js.LICENSE.txt",
     "static/media/App.css": "/friday-night-assistant/static/media/body-background.8be7b37a.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.938cb06b.js",
     "static/js/2.6794138a.chunk.js",
-    "static/css/main.0dd4fa3c.chunk.css",
-    "static/js/main.89f2e1a4.chunk.js"
+    "static/css/main.4dd9e57b.chunk.css",
+    "static/js/main.6f151ed3.chunk.js"
   ]
 }
