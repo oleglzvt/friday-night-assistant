@@ -41,7 +41,7 @@ class Drinks extends Component {
 				{/* save buttons below */}
 				<div className="saveButtons">
 					{this.state.plusButtonShown && <button className="saveBtn plusBtn" onClick={this.handleToggle}>
-						<i className="fas fa-plus"></i>
+						<i className="fas fa-plus" onClick={this.props.handleSave}></i>
 					</button>}
 
 					{this.state.checkButtonShown && <button className="saveBtn checkBtn" onClick={this.handleToggle}>

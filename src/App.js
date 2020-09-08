@@ -4,6 +4,7 @@ import axios from 'axios';
 import NameSearch from './components/NameSearch'
 import RandomSearch from './components/RandomSearch'
 import FavouritesContainer from './components/FavouritesContainer'
+import firebase from './firebase'
 
 class App extends Component {
 
@@ -17,6 +18,7 @@ class App extends Component {
       ingredients: [],
       loading: false,
       favVisible: false,
+      favDrinks: [],
     }
   }
 
@@ -107,6 +109,23 @@ class App extends Component {
     })
   }
 
+  componentDidMount() {
+    const dbRef = firebase.database().ref();
+    dbRef.on("value", (response) => {
+      console.log(response.val());
+      // this.setState({
+      //   favDrinks: newState,
+      // });
+    });
+  }
+
+  handleSave = (e) => {
+    e.preventDefault();
+    const dbRef = firebase.database().ref();
+    let savedDrinks = this.state.favDrinks
+    dbRef.push(savedDrinks);
+  }
+
   render () {
     return (
       <div className="app wrapper">
@@ -121,7 +140,7 @@ class App extends Component {
 
         {/* {this.state.favVisible ? <FavouritesContainer handleFav={this.handleFav} favVisible={this.state.favVisible}/> : null} */}
 
-        <FavouritesContainer handleFav={this.handleFav} favVisible={this.state.favVisible}/>
+        <FavouritesContainer handleFav={this.handleFav} favVisible={this.state.favVisible} favDrinks={this.state.favDrinks}/>
 
         {this.state.searchByName ? 
           <NameSearch 
@@ -145,6 +164,7 @@ class App extends Component {
             checkButtonShown={this.state.checkButtonShown}
             handleToggle={this.handleToggle}
             loading={this.state.loading}
+            handleSave={this.handleSave}
           /> : null
         }
 
