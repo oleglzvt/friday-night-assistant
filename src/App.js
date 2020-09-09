@@ -109,21 +109,22 @@ class App extends Component {
     })
   }
 
-  componentDidMount() {
-    const dbRef = firebase.database().ref();
-    dbRef.on("value", (response) => {
-      console.log(response.val());
-      // this.setState({
-      //   favDrinks: newState,
-      // });
-    });
-  }
+  // componentDidMount() {
+  //   const dbRef = firebase.database().ref();
+  //   dbRef.on("value", (response) => {
+  //     console.log(response.val());
+  //     this.setState({
+  //       favDrinks: newState,
+  //     });
+  //   });
+  // }
 
   handleSave = (e) => {
     e.preventDefault();
     const dbRef = firebase.database().ref();
-    let savedDrinks = this.state.favDrinks
+    let savedDrinks = this.state.drinks
     dbRef.push(savedDrinks);
+    // fix the issue with pushing one drink instead of all of them
   }
 
   render () {
@@ -153,6 +154,7 @@ class App extends Component {
             plusButtonShown={this.state.plusButtonShown}
             checkButtonShown={this.state.checkButtonShown}
             loading={this.state.loading}
+            handleSave={this.handleSave}
           /> : null
         }
         

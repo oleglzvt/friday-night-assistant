@@ -24,6 +24,7 @@ class NameSearch extends Component {
 								plusButtonShown={this.props.plusButtonShown} 
 								checkButtonShown={this.props.checkButtonShown} 
 								handleToggle={this.props.handleToggle}
+								handleSave={this.props.handleSave}
 								ingredients={[{ingredient: drink.strIngredient1, quantity: drink.strMeasure1}, {ingredient: drink.strIngredient2, quantity: drink.strMeasure2}, {ingredient: drink.strIngredient3, quantity: drink.strMeasure3}, {ingredient: drink.strIngredient4, quantity: drink.strMeasure4}, {ingredient: drink.strIngredient5, quantity: drink.strMeasure5}, {ingredient: drink.strIngredient6, quantity: drink.strMeasure6}]}
 							/>
 						)
