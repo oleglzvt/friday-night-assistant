@@ -106,16 +106,12 @@ class App extends Component {
   
   handleFav = () => {
     this.setState({
-      // favVisible: this.state.favVisible ? false : true,
-      // favVisible: true,
       favClassName: 'menuAnimationOn'
     })
   }
 
   handleClose = () => {
     this.setState({
-      // favVisible: this.state.favVisible ? false : true,
-      // favVisible: true,
       favClassName: 'menuAnimationOff'
     })
   }
