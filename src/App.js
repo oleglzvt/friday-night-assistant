@@ -17,8 +17,9 @@ class App extends Component {
       drinks: [],
       ingredients: [],
       loading: false,
-      favVisible: false,
+      // favVisible: false,
       favDrinks: [],
+      favClassName: '',
     }
   }
 
@@ -105,7 +106,17 @@ class App extends Component {
   
   handleFav = () => {
     this.setState({
-      favVisible: this.state.favVisible ? false : true,
+      // favVisible: this.state.favVisible ? false : true,
+      // favVisible: true,
+      favClassName: 'menuAnimationOn'
+    })
+  }
+
+  handleClose = () => {
+    this.setState({
+      // favVisible: this.state.favVisible ? false : true,
+      // favVisible: true,
+      favClassName: 'menuAnimationOff'
     })
   }
 
@@ -139,9 +150,9 @@ class App extends Component {
           <button className="menuBtn" onClick={this.handleRandomSearch}>I am in the mood for anything</button>
         </div>
 
-        {/* {this.state.favVisible ? <FavouritesContainer handleFav={this.handleFav} favVisible={this.state.favVisible}/> : null} */}
+        {/* {this.state.favVisible ? <FavouritesContainer handleFav={this.handleFav} favVisible={this.state.favVisible} favClassName={this.state.favClassName}/> : null} */}
 
-        <FavouritesContainer handleFav={this.handleFav} favVisible={this.state.favVisible} favDrinks={this.state.favDrinks}/>
+        <FavouritesContainer handleFav={this.handleFav} favVisible={this.state.favVisible} favDrinks={this.state.favDrinks} favClassName={this.state.favClassName} handleClose={this.handleClose}/>
 
         {this.state.searchByName ? 
           <NameSearch 

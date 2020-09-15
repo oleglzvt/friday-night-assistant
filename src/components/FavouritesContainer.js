@@ -23,16 +23,16 @@ class FavouritesContainer extends Component {
 
     render() {
         return (
-            <div className="menuAnimation" id={this.props.favVisible ? 'favOn' : 'favOff'}>
-                <div class="closeFavBtn" onClick={this.props.handleFav}>
-                    <i class="fas fa-times"></i>
+            <div className={`favMenu ${this.props.favClassName}`}>
+                <div className="closeFavBtn" onClick={this.props.handleClose}>
+                    <i className="fas fa-times"></i>
                 </div>
 
                 {/* {this.state.favDrinks.map((favDrink) => {
                     return(
                         <div>
                             <div className="drinkImage">
-					            <img src={favDrink[0].strDrinkThumb} />
+					            <img src={favDrink.strDrinkThumb} />
 				            </div>
                         </div>
                     )

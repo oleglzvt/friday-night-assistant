@@ -192,8 +192,8 @@ input {
 }
 
 @keyframes slideLeft {
-  0% { opacity: 0; transform: translateX(100%); }   
-  100% { opacity: 1; transform: translateX(0); }
+  0% { opacity: 1; transform: translateX(200%); }   
+  100% { opacity: 0; transform: translateX(0); }
 }
 
 @keyframes slideRight {
@@ -239,15 +239,24 @@ input {
   animation-delay: .4s;
 }
 
-.menuAnimation {
+.favMenu {
   width: 50vw;
   height: 100vh;
   position: absolute;
-  left: 0;
+  left: -100%;
   top: 0;
   background-color: rgb(106, 2, 2);
-  display: none;
   z-index: 2;
+}
+
+.menuAnimationOn {
+  animation: slideRight .5s ease-out;
+  left: 0;
+}
+
+.menuAnimationOff {
+  animation: slideLeft .7s ease-out;
+  left: -100%;
 }
 
 /* mobile design */
@@ -269,16 +278,6 @@ input {
   .menuAnimation {
     width: 70vw;
   }
-}
-
-#favOff {
-  display: none;
-  animation: slideDown .5s ease-out;
-}
-
-#favOn {
-  display: block;
-  animation: slideRight .5s ease-out;
 }
 
 .closeFavBtn {
