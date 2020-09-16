@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/friday-night-assistant/static/css/main.bc907e02.chunk.css",
+    "main.css": "/friday-night-assistant/static/css/main.2b8a62a1.chunk.css",
     "main.js": "/friday-night-assistant/static/js/main.de07abdd.chunk.js",
     "main.js.map": "/friday-night-assistant/static/js/main.de07abdd.chunk.js.map",
     "runtime-main.js": "/friday-night-assistant/static/js/runtime-main.938cb06b.js",
@@ -8,16 +8,16 @@
     "static/js/2.0d05cc90.chunk.js": "/friday-night-assistant/static/js/2.0d05cc90.chunk.js",
     "static/js/2.0d05cc90.chunk.js.map": "/friday-night-assistant/static/js/2.0d05cc90.chunk.js.map",
     "index.html": "/friday-night-assistant/index.html",
-    "precache-manifest.357f32af4bd00c32c7db7fd84761e6f6.js": "/friday-night-assistant/precache-manifest.357f32af4bd00c32c7db7fd84761e6f6.js",
+    "precache-manifest.260cdf6abbcc80b78999fd959c81d3cc.js": "/friday-night-assistant/precache-manifest.260cdf6abbcc80b78999fd959c81d3cc.js",
     "service-worker.js": "/friday-night-assistant/service-worker.js",
-    "static/css/main.bc907e02.chunk.css.map": "/friday-night-assistant/static/css/main.bc907e02.chunk.css.map",
+    "static/css/main.2b8a62a1.chunk.css.map": "/friday-night-assistant/static/css/main.2b8a62a1.chunk.css.map",
     "static/js/2.0d05cc90.chunk.js.LICENSE.txt": "/friday-night-assistant/static/js/2.0d05cc90.chunk.js.LICENSE.txt",
     "static/media/App.css": "/friday-night-assistant/static/media/body-background.8be7b37a.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.938cb06b.js",
     "static/js/2.0d05cc90.chunk.js",
-    "static/css/main.bc907e02.chunk.css",
+    "static/css/main.2b8a62a1.chunk.css",
     "static/js/main.de07abdd.chunk.js"
   ]
 }
