@@ -17,6 +17,7 @@ class NameSearch extends Component {
 					{this.props.loading ? <LoadingSpinner /> : this.props.drinks.map(drink => {
 						return (
 							<Drinks  
+								drinks = {this.props.drinks}
 								image={drink.strDrinkThumb} 
 								title={drink.strDrink} 
 								recipe={drink.strInstructions} 

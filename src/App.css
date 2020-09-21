@@ -35,12 +35,13 @@ img {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   text-transform: uppercase;
+  text-align: center;
 }
 
 h1 {
-  text-align: center;
   font-size: 4rem;
   font-family: 'Fredoka One', cursive;
   color: antiquewhite;
@@ -49,6 +50,11 @@ h1 {
 
 h2 {
   font-size: 2rem;
+}
+
+h3 {
+  font-size: 3rem;
+  color: antiquewhite;
 }
 
 p {
@@ -151,6 +157,11 @@ input {
   background-color: rgb(252, 247, 241);
 }
 
+.favDrink {
+  width: 80%;
+  margin: 20px auto;
+}
+
 .drinkImage {
   width: 15%;
   min-width: 200px;
@@ -192,7 +203,7 @@ input {
 }
 
 @keyframes slideLeft {
-  0% { opacity: 1; transform: translateX(200%); }   
+  0% { opacity: 1; transform: translateX(100%); }   
   100% { opacity: 0; transform: translateX(0); }
 }
 
@@ -240,13 +251,14 @@ input {
 }
 
 .favMenu {
-  width: 50vw;
-  height: 100vh;
+  width: 100vw;
+  min-height: 100vh;
   position: absolute;
   left: -100%;
   top: 0;
   background-color: rgb(106, 2, 2);
   z-index: 2;
+  background-size: contain;
 }
 
 .menuAnimationOn {
@@ -255,8 +267,24 @@ input {
 }
 
 .menuAnimationOff {
-  animation: slideLeft .7s ease-out;
+  animation: slideLeft .5s ease-out;
   left: -100%;
+}
+
+.closeFavBtn {
+  margin: 20px;
+  font-size: 4rem;
+  border: 2px solid white;
+  color: white;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 50%;
+}
+
+.closeFavBtn:hover,
+.closeFavBtn:focus,
+.closeFavBtn:focus-within {
+  cursor: pointer;
 }
 
 /* mobile design */
@@ -275,23 +303,7 @@ input {
     text-align: center;
   }
 
-  .menuAnimation {
-    width: 70vw;
+  .favMenu {
+    width: 100vw;
   }
-}
-
-.closeFavBtn {
-  margin: 20px;
-  font-size: 4rem;
-  border: 2px solid white;
-  color: white;
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 50%;
-}
-
-.closeFavBtn:hover,
-.closeFavBtn:focus,
-.closeFavBtn:focus-within {
-  cursor: pointer;
 }

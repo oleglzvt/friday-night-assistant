@@ -116,22 +116,15 @@ class App extends Component {
     })
   }
 
-  // componentDidMount() {
-  //   const dbRef = firebase.database().ref();
-  //   dbRef.on("value", (response) => {
-  //     console.log(response.val());
-  //     this.setState({
-  //       favDrinks: newState,
-  //     });
-  //   });
-  // }
-
   handleSave = (e) => {
     e.preventDefault();
     const dbRef = firebase.database().ref();
-    let savedDrinks = this.state.drinks
+    // this.setState({
+    //   favDrinks: this.state.drinks,
+    // })
+    let savedDrinks = this.state.drinks[0];
     dbRef.push(savedDrinks);
-    // fix the issue with pushing one drink instead of all of them
+    // fix the issue with adding the appropriate element from the array
   }
 
   render () {
