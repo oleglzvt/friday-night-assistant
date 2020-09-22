@@ -106,13 +106,15 @@ class App extends Component {
   
   handleFav = () => {
     this.setState({
-      favClassName: 'menuAnimationOn'
+      favClassName: 'menuAnimationOn',
+      mainPageClass: 'hidden',
     })
   }
 
   handleClose = () => {
     this.setState({
-      favClassName: 'menuAnimationOff'
+      favClassName: 'menuAnimationOff',
+      mainPageClass: 'visible',
     })
   }
 
@@ -145,6 +147,7 @@ class App extends Component {
 
         {this.state.searchByName ? 
           <NameSearch 
+            mainPageClass={this.state.mainPageClass}
             userInput={this.state.userInput}
             handleChange={this.handleChange}
             handleSubmit={this.handleSubmit}

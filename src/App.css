@@ -228,6 +228,14 @@ input {
   animation: scaling 1s ease-in-out infinite;
 }
 
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
 @keyframes scaling {
   0%, 100% {
     transform: scale(.2);

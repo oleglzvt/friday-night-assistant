@@ -8,7 +8,7 @@ class NameSearch extends Component {
 	render() {
 		if (this.props.drinks !== null) {
 			return(
-				<div className="animateTop">
+				<div className={`animateTop ${this.props.mainPageClass}`}>
 					<form>
 						<input value={this.props.userInput} type="text" placeholder="Enter cocktail name" onChange={this.props.handleChange}/>
 						<button className="menuBtn" onClick={this.props.handleSubmit}>Give me that drink</button>
