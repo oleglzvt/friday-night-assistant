@@ -163,6 +163,7 @@ class App extends Component {
         
         {this.state.random ? 
           <RandomSearch 
+            mainPageClass={this.state.mainPageClass}
             drinks={this.state.drinks}
             refreshPage={this.refreshPage}
             plusButtonShown={this.state.plusButtonShown}

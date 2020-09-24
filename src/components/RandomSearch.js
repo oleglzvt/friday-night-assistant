@@ -7,7 +7,7 @@ class RandomSearch extends Component {
 
 	render() {
 		return(
-			<div>
+			<div className={this.props.mainPageClass}>
 				{this.props.loading ? <LoadingSpinner /> : this.props.drinks.map(drink => {
 					return (
 						<Drinks className="animateBottom"
