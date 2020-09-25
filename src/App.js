@@ -49,12 +49,11 @@ class App extends Component {
       dataType: 'json',
       method: 'GET'
     }).then((res) => {
-      
       setTimeout( () => {
         this.setState({
           drinks: res.data.drinks,
           userInput: '',
-          loading: false
+          loading: false,
         })
       }, 1000)
     })
@@ -94,7 +93,7 @@ class App extends Component {
         this.setState({
           drinks: res.data.drinks,
           userInput: '',
-          loading: false
+          loading: false,
         })
       }, 1000)
     })

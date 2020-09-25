@@ -23,16 +23,16 @@ class Drinks extends Component {
 
     render() {
         return(
-            <div className="drink animateBottom" key={this.props.key}>
+            <div className="drink animateBottom" key={this.props.title}>
 				<div className="drinkImage">
-					<img src={this.props.image} alt={this.props.title}/>
+					<img src={this.props.image} alt={`${this.props.title} in a glass`}/>
 				</div>
 				<div className="drinkDescription">
 					<h2>{this.props.title}</h2>
 					<p>You will need:</p>
 					<ul className="ingredients">
 						{(this.props.ingredients.map(ingredient => {
-							return <li>{ingredient.ingredient ? ingredient.ingredient : null}{ingredient.quantity ? `: ${ingredient.quantity}` : null}</li>
+							return <li key={Math.random()}>{ingredient.ingredient ? ingredient.ingredient : null}{ingredient.quantity ? `: ${ingredient.quantity}` : null}</li>
 						}))}
 					</ul>
 					<p>{this.props.recipe}</p>

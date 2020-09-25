@@ -10,7 +10,7 @@ class NameSearch extends Component {
 			return(
 				<div className={`animateTop ${this.props.mainPageClass}`}>
 					<form>
-						<input value={this.props.userInput} type="text" placeholder="Enter cocktail name" onChange={this.props.handleChange}/>
+						<input value={this.props.userInput} type="text" placeholder="Enter cocktail name" onChange={this.props.handleChange} autoFocus/>
 						<button className="menuBtn" onClick={this.props.handleSubmit}>Give me that drink</button>
 					</form>
 
